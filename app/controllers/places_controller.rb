@@ -1,12 +1,13 @@
 class PlacesController < ApplicationController
 
 def index
-  render :template => "places/index"
+  # render :template => "places/index"
   @places = Place.all
 end
 
 def show
-  @place = Place.find_by({ "name" => params["name"]})
+  @place = Place.find_by({ "name" => params["name"] })
+  @entries = Entry.where({"place_id" => @place["id"] })
 end
 
 def new
