@@ -15,9 +15,9 @@ end
 def create
   @place = Place.new
   @place["name"] = params ["name"]
+  @place.save
 
-@place.save
+  redirect_to "/places"
+end
 
-redirect_to "/places"
-end
-end
+end 

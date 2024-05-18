@@ -6,3 +6,4 @@ resources "entries"
   # Defines the root path route ("/")
   # get("/", { :controller => "articles", :action => "index" })
 end
+
