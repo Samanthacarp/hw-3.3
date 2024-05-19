@@ -1,0 +1,28 @@
+<!-- Place details page -->
+
+<h1><%= @place ["name"] %></h1>
+
+<h2><%= @place ["created_at"] %>, <%= @place["created_at"] %></h2>
+
+<h3>Entriess</h3>
+
+<ul>
+  <% for entry in @entriess %>
+    <li>
+      <a href="/entriess/<%= entry["id"] %>">
+        <%= entry["name"] %>, <%= entry["created_at"] %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+<p>
+  <a href="/entriess/new?place_id=<%= @cplace["id"] %>">New Contact</a>
+</p>
+
+<p><a href="/entriess">Back to All Places</a></p>
+
+<form action="/entriess/<%= @place["id"] %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button>Delete Place</button>
+</form>

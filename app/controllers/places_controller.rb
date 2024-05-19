@@ -7,7 +7,7 @@ end
 
 def show
   @place = Place.find_by({ "name" => params["name"] })
-  @entries = Entry.where({"place_id" => @place["id"] })
+  @entriess = Entry.where({"place_id" => @place["id"] })
 end
 
 def new
