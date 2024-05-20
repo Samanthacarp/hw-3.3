@@ -4,7 +4,7 @@
 
 <h2><%= @place ["created_at"] %>, <%= @place["created_at"] %></h2>
 
-<h3>Entriess</h3>
+<h3>Entries</h3>
 
 <ul>
   <% for entry in @entries %>
@@ -17,7 +17,7 @@
 </ul>
 
 <p>
-  <a href="/entries/new?place_id=<%= @place["id"] %>">New Contact</a>
+  <a href="/entries/new?place_id=<%= @place["id"] %>">New Entry</a>
 </p>
 
 <p><a href="/entries">Back to All Places</a></p>
