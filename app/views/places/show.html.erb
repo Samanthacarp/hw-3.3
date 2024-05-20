@@ -7,9 +7,9 @@
 <h3>Entriess</h3>
 
 <ul>
-  <% for entry in @entriess %>
+  <% for entry in @entries %>
     <li>
-      <a href="/entriess/<%= entry["id"] %>">
+      <a href="/entries/<%= entry["id"] %>">
         <%= entry["name"] %>, <%= entry["created_at"] %>
       </a>
     </li>
@@ -17,12 +17,12 @@
 </ul>
 
 <p>
-  <a href="/entriess/new?place_id=<%= @cplace["id"] %>">New Contact</a>
+  <a href="/entries/new?place_id=<%= @place["id"] %>">New Contact</a>
 </p>
 
-<p><a href="/entriess">Back to All Places</a></p>
+<p><a href="/entries">Back to All Places</a></p>
 
-<form action="/entriess/<%= @place["id"] %>" method="post">
+<form action="/entries/<%= @place["id"] %>" method="post">
   <input type="hidden" name="_method" value="delete">
   <button>Delete Place</button>
 </form>
